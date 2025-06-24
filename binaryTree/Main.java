@@ -8,11 +8,14 @@ public class Main {
         // basic.prettyDisplay();
 
         BST bst = new BST();
-        bst.insert(20);
         bst.insert(10);
+        bst.insert(5);
+        bst.insert(2);
+        bst.insert(7);
         bst.insert(15);
-        bst.insert(25);
-        bst.insert(23);
+        bst.insert(20);
         bst.prettyDisplay();
+        bst.isBalanced();
+        bst.search(21);
     }
 }

@@ -42,6 +42,40 @@ public class BST {
         return node;
     }
 
+    public void isBalanced(){
+        if(isBalanced(root)){
+            System.out.println("Tree is balanced.");
+        }
+        else{
+            System.out.println("Tree is not balanced.");
+        }
+    }
+    private boolean isBalanced(Node node){
+        if(node == null){
+            return true;
+        }
+        return Math.abs(height(node.left)-height(node.right)) <= 1 && (isBalanced(node.left) && isBalanced(node.right));
+    }
+
+    public void search(int value){
+        search(root,value);
+    }
+    private void search(Node node, int value){
+        if(node == null){
+            System.out.println("Value not found!");
+            return;
+        }
+        if(node.data == value){
+            System.out.println("Value found!!");
+        }
+        if(node.data > value){
+            search(node.left, value);
+        }
+        if(node.data < value){
+            search(node.right, value);
+        }
+    }
+    
     public void prettyDisplay() {
         prettyDisplay(root, 0);
     }
