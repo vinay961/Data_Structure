@@ -23,10 +23,6 @@ public class SLL {
         size = 0;
     }
 
-    public void createList(int[] arr){
-        
-    }
-
     public void insertNodeAtStart(int value){
         Node node = new Node(value);
         node.next = head;
